@@ -74,7 +74,10 @@ function authenticateToken(req, res, next) {
 }
 
 // ✅ Routes
-
+// Health check route
+app.get("/", (req, res) => {
+  res.send("Server up and running");
+});
 // Register
 app.post("/api/register", async (req, res) => {
   try {
